@@ -1,0 +1,11 @@
+.welcome {
+  position: fixed; /* Esto fija el componente en la pantalla */
+  top: 50%; /* Esto lo coloca en la mitad vertical de la pantalla */
+  left: 50%; /* Esto lo coloca en la mitad horizontal de la pantalla */
+  transform: translate(-50%, -50%);
+}
+
+.letter {
+  width: 10%;
+  margin: 0 auto;
+}
