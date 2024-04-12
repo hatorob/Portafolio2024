@@ -1,12 +1,18 @@
-<div class="container w-2/4 h-80 welcome">
+<div class="container  w-2/4 sm:h-[300px] md:h-[200px] lg:h-80 welcome">
   <div class="flex flex-col">
-    <h1 class="text-9xl text-secundary">BIENV<span class="text-blueLight">E</span><span class="text-light">NIDOS</span></h1>
-    <div class="flex p-14">
+    <h1
+      class="text-4xl md:text-7xl lg:text-8xl xl:text-9xl text-secundary"
+      >
+      BIENV<span class="text-blueLight">E</span><span class="text-light">NIDOS</span>
+    </h1>
+    <div class="flex flex-col lg:flex-row md:mt-4 md:p-10 lg:mt-0">
       <div>
-        <img src="../assets/marcaName.png" alt="" width="500px">
+        <img src="../assets/marcaName.png"
+          alt="imagen de la marca personal"
+          class="lg:w-[500px]">
       </div>
-      <div class="mt-8 ml-8 cursor-pointer">
-        <p class="text-light text-xl hover:text-secundary" [routerLink]="route.route">
+      <div class="md:mt-6 lg:mt-8 lg:ml-8 cursor-pointer">
+        <p class="text-light sm:text-lg md:text-xl hover:text-secundary text-center" [routerLink]="route.route">
           <span class="text-blueLight"> &lt;</span>VerMás  <span class="text-blueLight">/&gt;</span>
         </p>
       </div>

@@ -6,3 +6,22 @@ p {
   width: 80%;
   margin: 25px 40px 0 auto;
 }
+/* Media query para los links de mi navbar */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar p {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+}
+
+/* .navbar p {
+  font-size: 28px;
+} */
+.submenu {
+  background-color: rgba(0,195,239,0.6)
+  /* background-color: rgba(0,0,0,0.6) */
+}
+
+.submenu p {
+  font-size: 16px;
+}

@@ -1,7 +1,28 @@
-<div class="flex text-light navbar justify-between">
-  <p>Inicio</p>
-  <p>Acerca de mi</p>
-  <p>Blog</p>
-  <p>Proyectos</p>
-  <p>Contacto</p>
+<div class="flex flex-col home-container fixed top-0 z-50 w-screen">
+  <div class="w-[100%] h-[100px] flex">
+    <div class="w-[150px] p-6">
+      <img src="../../../../assets/LOGO.svg" alt="logo-marca-personal" class="w-[60px] h-[60px]">
+    </div>
+    <div class="w-full">
+      <div class="flex justify-end mr-10">
+        <button (click)="displayMenu()" type="button" class="sm:block md:hidden relative inline-flex w-20 mt-4 items-center justify-center rounded-md p-2 text-black hover:bg-black hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black" aria-controls="mobile-menu" aria-expanded="false">
+          <svg class="block h-[60px] w-[60px] text-blueLight" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <svg class="hidden h-[60px] w-[60px] text-blueLight" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+
+        </button>
+      </div>
+      <div class="flex text-light navbar md:justify-around justify-end m-[0px]">
+        <p class="hidden md:block" *ngFor="let item of menuHome" [routerLink]="item.route"> {{ item.name }} </p>
+      </div>
+
+
+      <div *ngIf="isClick" class="flex flex-col submenu w-[250px] fixed z-50 right-10 p-2 rounded-sm md:hidden mt-[-40px]">
+        <p class="border-b-2 p-2 border-light text-light" *ngFor="let item of menuHome" [routerLink]="item.route"> {{ item.name }} </p>
+      </div>
+    </div>
+  </div>
 </div>
