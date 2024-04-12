@@ -16,12 +16,12 @@
         </button>
       </div>
       <div class="flex text-light navbar md:justify-around justify-end m-[0px]">
-        <p class="hidden md:block" *ngFor="let item of menuHome" [routerLink]="item.route"> {{ item.name }} </p>
+        <p class="hidden md:block" *ngFor="let item of menuHome" [routerLink]="item.route" routerLinkActive="active"> <span class="text-blueLight">&lt;</span>{{ item.name }}<span class="text-blueLight">/&gt;</span></p>
       </div>
 
 
       <div *ngIf="isClick" class="flex flex-col submenu w-[250px] fixed z-50 right-10 p-2 rounded-sm md:hidden mt-[-40px]">
-        <p class="border-b-2 p-2 border-light text-light" *ngFor="let item of menuHome" [routerLink]="item.route"> {{ item.name }} </p>
+        <p class="border-b-2 p-2 border-blueLight text-light active:text-secundary text-center" *ngFor="let item of menuHome" [routerLink]="item.route" routerLinkActive="active"> <span class="text-blueLight">&lt;</span>{{ item.name }}<span class="text-blueLight">/&gt;</span></p>
       </div>
     </div>
   </div>

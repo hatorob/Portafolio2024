@@ -18,10 +18,14 @@ p {
   font-size: 28px;
 } */
 .submenu {
-  background-color: rgba(0,195,239,0.6)
+  background-color: rgba(0,0,0,.7)
   /* background-color: rgba(0,0,0,0.6) */
 }
 
 .submenu p {
   font-size: 16px;
+}
+
+.active {
+  color: #00FFB2;
 }
