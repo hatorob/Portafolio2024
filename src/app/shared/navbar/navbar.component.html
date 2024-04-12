@@ -16,7 +16,7 @@
         </button>
       </div>
       <div class="flex text-light navbar md:justify-around justify-end m-[0px]">
-        <p class="hidden md:block" *ngFor="let item of menuHome" [routerLink]="item.route" routerLinkActive="active"> <span class="text-blueLight">&lt;</span>{{ item.name }}<span class="text-blueLight">/&gt;</span></p>
+        <p class="hidden md:block hover:cursor-pointer" *ngFor="let item of menuHome" [routerLink]="item.route" routerLinkActive="active"> <span class="text-blueLight">&lt;</span>{{ item.name }}<span class="text-blueLight">/&gt;</span></p>
       </div>
 
 
