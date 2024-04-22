@@ -34,7 +34,8 @@
     </div>
   </div>
 </div>
-<div class="flex flex-col mt-10">
+<!-- Habilidades -->
+<div class="flex flex-col mt-16">
   <h1 class="text-light text-2xl text-center">HABILIDADES <span class="text-secundary">FRONT</span> - <span class="text-blueLight">BACKEND</span></h1>
   <div class="flex justify-around mt-16">
     <div class="hidden md:block">
@@ -60,6 +61,54 @@
     </div>
     <div>
       <i title="MYSQL, MONGODB, POSTGRESQL" class="fa-solid fa-database text-blueLight text-[50px] fa-beat"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Experiencia laboral -->
+
+<div class="mt-16 flex flex-col mb-16">
+  <h1 class="text-secundary text-2xl text-center">EXPERIENCIA LABORAL</h1>
+  <div class="grid sm:grid-cols-1  md:grid-cols-2 xl:grid-cols-3 mt-16 gap-10">
+    <div class="rounded-xl h-auto shadow-md"
+        [ngClass]="{'card-one shadow-secundary': i % 2 !== 0, 'card-two shadow-blueLight': i % 2 == 0}"
+        *ngFor="let workExperience of workExperienceDevelop; let i = index"
+    >
+      <div class="w-[90%] mx-auto my-3">
+        <!-- Empresa y fecha laboral -->
+        <div class="flex flex-row justify-between">
+          <div class="w-[70%]">
+            <p class="text-white text-xl"><span class="text-secundary">Empresa:</span>  {{workExperience.company}}</p>
+          </div>
+          <p class="text-blueLight text-xs p-1"> {{ workExperience.workDate.start }} - {{ workExperience.workDate.end }} </p>
+        </div>
+        <!-- Description empresa -->
+        <div class="mt-1">
+          <span class="text-blueLight text-sm"> {{ workExperience.description }} </span>
+        </div>
+        <!-- Cargo -->
+        <div class="mt-1">
+          <p class="text-white text-base"><span class="text-secundary">Cargo:</span> {{ workExperience.position }} </p>
+        </div>
+        <!-- Area  -->
+        <div>
+          <p class="text-white text-base"><span class="text-secundary">Area:</span> {{ workExperience.area }} </p>
+        </div>
+        <!-- Responsabilidades  -->
+        <div class="mt-1">
+          <p class="text-white text-base"><span class="text-secundary">Responsabilidades:</span></p>
+          <div class="grid grid-cols-2 text-sm">
+            <p class="text-white" *ngFor="let item of workExperience.responsabilities"><span class="text-blueLight">*</span> {{ item }}</p>
+          </div>
+        </div>
+        <!-- Skills  -->
+        <div class="mt-1">
+          <p class="text-white text-base"><span class="text-secundary">Habilidades:</span></p>
+          <div class="grid grid-cols-3 text-sm">
+            <p class="text-white" *ngFor="let item of workExperience.skills"><span class="text-blueLight">*</span> {{ item }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

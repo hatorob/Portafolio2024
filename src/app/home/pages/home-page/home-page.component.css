@@ -1,13 +1,14 @@
 
-.withMe {
-  background-color: rgba(55, 66, 250,0.1)
-}
-.resumen {
+.resumen, .card-one {
   background-color: rgba(46, 204, 113,0.1)
+}
+.withMe, .card-two {
+  background-color: rgba(55, 66, 250,0.1)
 }
 .withMe, .resumen p {
   font-size: 18px;
 }
+
 
 @media (min-width: 1024px) and (max-width: 1500px) {
   .withMe, .resumen p {
