@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { animation } from '@angular/animations';
 
 @Component({
   selector: 'app-home-page',

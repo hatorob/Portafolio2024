@@ -11,8 +11,15 @@ interface Route {
 })
 export class WelcomePageComponent {
 
+  public isLoad: boolean = false;
   public route: Route = {
     route: './alejandro-toro'
   }
+
+  /* Escuchamos el evento del loading para renderizar toda la pagina */
+  onIsLoading(isLoading: boolean): void {
+    this.isLoad = isLoading;
+  }
+
 
 }

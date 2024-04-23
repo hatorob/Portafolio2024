@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HomeLayoutComponent {
 
+  public isLoad: boolean = false;
+  /* Escuchamos el evento del loading para renderizar toda la pagina */
+
+  onIsLoading(isLoading: boolean): void {
+    this.isLoad = isLoading;
+  }
 }
