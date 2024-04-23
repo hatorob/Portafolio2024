@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ContactsPageComponent } from './pages/contacts-page/contacts-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
-import { WithMePageComponent } from './pages/with-me-page/with-me-page.component';
 import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
+import { BlogsComponent } from './pages/blogs/blogs.component';
 
 const routes: Routes = [
   {
@@ -20,12 +20,8 @@ const routes: Routes = [
         component: ContactsPageComponent
       },
       {
-        path: 'proyectos',
-        component: ProjectsPageComponent
-      },
-      {
-        path: 'acerca-de-mi',
-        component: WithMePageComponent
+        path: 'blogs',
+        component: BlogsComponent
       },
       {
         path: '**',

@@ -15,8 +15,7 @@ export class NavbarComponent {
   public isClick: boolean = false;
   public menuHome: Routes[] = [
     { name: 'Inicio' , route: './inicio' },
-    { name: 'acerca de mi' , route: './acerca-de-mi' },
-    { name: 'Proyectos' , route: './proyectos' },
+    { name: 'Blogs' , route: './blogs' },
     { name: 'Contacto' , route: './contacto' },
   ];
   public displayMenu(): void {
