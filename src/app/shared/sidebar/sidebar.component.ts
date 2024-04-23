@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
+@HostListener('window:scroll', ['$event'])
 @Component({
-  selector: 'app-sidebar',
+  selector: 'shared-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
+
 
 }

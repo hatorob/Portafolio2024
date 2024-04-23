@@ -1,3 +1,4 @@
+<!-- quien soy -->
 <div class="flex flex-col lg:flex-row gap-2">
   <div class="lg:w-[30%] 2xl:h-[550px]">
     <div class="flex justify-end">
@@ -22,13 +23,13 @@
       </div>
       <div class="resumen lg:w-[220px] 2xl:w-[330px] p-5 rounded-xl shadow-md shadow-secundary mt-5">
         <p class="text-white">
-          Apacionado por el
+          Apasionado por el
           <span class="text-blueLight">mundo IT</span>,
           con más de
           <span class="text-secundary">3 años de experiencia</span>
-          laboral entre ingeniero y desarrollador.
-          <span class="text-blueLight">No dudes en contactarme</span>,
-          puedo <span class="text-secundary">aportar mucho valor</span>
+          laboral entre <span class="text-blueLight">ingeniero</span> y <span class="text-blueLight">desarrollador</span>.
+          <!-- <span class="text-blueLight">No dudes en contactarme</span>,
+          puedo <span class="text-secundary">aportar mucho valor</span> -->
         </p>
       </div>
     </div>
@@ -67,18 +68,18 @@
 
 <!-- Experiencia laboral -->
 
-<div class="mt-16 flex flex-col mb-16">
+<div class="mt-16 flex flex-col">
   <h1 class="text-secundary text-2xl text-center">EXPERIENCIA LABORAL</h1>
   <div class="grid sm:grid-cols-1  md:grid-cols-2 xl:grid-cols-3 mt-16 gap-10">
     <div class="rounded-xl h-auto shadow-md"
-        [ngClass]="{'card-one shadow-secundary': i % 2 !== 0, 'card-two shadow-blueLight': i % 2 == 0}"
+        [ngClass]="{'card-one shadow-secundary': i % 2 !== 0, 'card-two shadow-blueLight': i % 2 == 0, 'xl:col-start-2': workExperienceDevelop.length <= 4 && i == 3 }"
         *ngFor="let workExperience of workExperienceDevelop; let i = index"
     >
       <div class="w-[90%] mx-auto my-3">
         <!-- Empresa y fecha laboral -->
         <div class="flex flex-row justify-between">
           <div class="w-[70%]">
-            <p class="text-white text-xl"><span class="text-secundary">Empresa:</span>  {{workExperience.company}}</p>
+            <p class="text-white text-xl"><span class="text-secundary"></span>  {{workExperience.company}}</p>
           </div>
           <p class="text-blueLight text-xs p-1"> {{ workExperience.workDate.start }} - {{ workExperience.workDate.end }} </p>
         </div>
@@ -92,7 +93,7 @@
         </div>
         <!-- Area  -->
         <div>
-          <p class="text-white text-base"><span class="text-secundary">Area:</span> {{ workExperience.area }} </p>
+          <p class="text-white text-base"><span class="text-secundary">Área:</span> {{ workExperience.area }} </p>
         </div>
         <!-- Responsabilidades  -->
         <div class="mt-1">
@@ -113,3 +114,46 @@
   </div>
 </div>
 
+<!-- Projects -->
+<div class="mt-16 flex flex-col w-[95%] mx-auto my-0">
+
+  <h1 class="text-blueLight text-2xl text-center">PROYECTOS</h1>
+  <div class="mt-16">
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 gap-7 mb-14" *ngFor="let project of projects; let i = index">
+      <!-- contenedor imagen -->
+      <div
+        class="w-full lg:w-[80%] h-[250px] lg:h-[300px] order-2 mx-auto my-0"
+        [ngClass]="{'lg:order-2': i % 2 !== 0, 'lg:order-1': i % 2 != 0}"
+      >
+        <a [href]="project.url" target="_blank">
+          <img
+            [src]="project.image"
+            class="w-full h-full rounded-3xl lg:rounded-none"
+            [ngClass]="{'lg:order-1 lg:rounded-r-3xl': i % 2 != 0, 'lg:rounded-l-3xl': i % 2 == 0}"
+            alt="imagen de app de paises">
+        </a>
+      </div>
+      <!-- Contenedor descripción -->
+      <div
+        class="px-2 py:6 lg:px-6 lg:py-6 flex flex-col gap-4 order-1"
+        [ngClass]="{'lg:order-1': i % 2 !== 0, 'lg:order-2': i % 2 == 0}"
+      >
+        <h1
+          class="text-xl"
+          [ngClass]="{'text-secundary': i % 2 != 0,'text-blueLight': i % 2 == 0 }"> {{ project.title }} | {{project.company}}</h1>
+        <p class="text-white text-base"> {{ project.description }} </p>
+        <div class="flex gap-10 justify-around">
+          <div *ngFor="let skill of project.skills">
+            <i [title]="skill.title"
+              class="text-[40px]"
+              [ngClass]="[skill.icon, (i % 2 !== 0 ? 'text-secundary' : 'text-blueLight')]"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Redes sociales -->
+<shared-sidebar class="lg:hidden"/>
