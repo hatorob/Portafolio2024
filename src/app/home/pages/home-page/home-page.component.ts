@@ -1,10 +1,36 @@
 import { Component } from '@angular/core';
-import { animation } from '@angular/animations';
+import { trigger, style, transition, animate, state } from '@angular/animations';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.css'
+  styleUrl: './home-page.component.css',
+  animations: [
+    trigger('witMe',[
+      state('void', style({
+        transform: 'translateX(-100%)',
+        opacity:0
+      })),
+      transition(':enter', [
+        animate(1000, style({
+          transform: 'translateX(0%)',
+          opacity: 1
+        }))
+      ])
+    ]),
+    trigger('skills',[
+      state('void', style({
+        transform: 'translateX(200%)',
+        opacity:0
+      })),
+      transition(':enter', [
+        animate(1500, style({
+          transform: 'translateX(0%)',
+          opacity: 1
+        }))
+      ])
+    ])
+  ]
 })
 export class HomePageComponent {
 

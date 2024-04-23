@@ -1,7 +1,7 @@
 <shared-sniper-loading (onIsLoading)="onIsLoading($event)" />
 <div *ngIf="isLoad">
-  <shared-navbar />
-  <shared-sidebar class="hidden lg:block" />
+  <shared-navbar @navbar />
+  <shared-sidebar class="hidden lg:block" @sidebar />
   <div class="w-[90%] md:w-[80%] h-full mt-[100px] my-0 mx-auto">
     <router-outlet />
   </div>
